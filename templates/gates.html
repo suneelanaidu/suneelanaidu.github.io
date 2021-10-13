@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>GATES</title>
+    <script>
+        var addBinary = function(a, b) {
+            var dec = Number(parseInt(a, 2)) + Number(parseInt(b, 2));
+            var dec1 = dec >>> 1
+            alert(dec1)
+
+            alert(dec.toString(2))
+
+            return dec.toString(2);
+        };
+        var multiplyBinary = function(a, b) {
+            var dec = Number(parseInt(a, 2)) * Number(parseInt(b, 2));
+
+            alert(dec)
+            alert(dec.toString(2))
+            return dec.toString(2);
+        };
+
+    </script>
+</head>
+<body>
+
+<input type="button" value="Add Binary" onclick=" addBinary('10010111', '0000000')"></input>
+<input type="button" value="Multiply Binary" onclick=" multiplyBinary('0101', '0011')"></input>
+
+
+<!--
+form name="form1" action="gates.html" method="get">
+
+<table >
+    <tr>
+        <th> Input 1</th>
+        <th> Input 2</th>
+        <th> OR </th>
+    </tr>
+    <tr>
+        <td id="inp1">     localStorage1.getItem("input1");
+        </td>
+        <td id = "inp2"> localStorage2.getItem("input2"); </td>
+        <td>  inp1 || inp2 </td>
+    </tr>
+</table>
+</form>
+-->
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!-- Navigation Bar from bootstrap
+This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
+-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="https://csp.nighthawkcodingsociety.com/">{{basename}}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="navbar-nav mr-auto">
+            <li class="navbar-nav">
+                <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
+                <!-- commenting out these lines for the moment-->
+                <!-- stub is shown using the name of the route -->
+                <!--<a class="nav-link" href={>{ url_for('index') }}>Portfolio -->
+                <a class="nav-link" >NightHawk Coding Society</a>
+                <a class="nav-link" href={{ url_for('stub') }}>Minilab</a>
+                <a class="nav-link" href={{ url_for('greet') }}>Greet</a>
+                <a class="nav-link" href={{ url_for('binary') }}>Binary</a>
+                <a class="nav-link" href={{ url_for('rgb') }}>RGB</a>
+
+            <li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href={{ url_for('covid19') }}>Covid</a>
+                    <a class="dropdown-item" href={{ url_for('joke') }}>Joke</a>
+                    <a class="dropdown-item" href={{ url_for('jokes') }}>Jokes</a>
+                    <a class="dropdown-item" href={{ url_for('api.get_jokes') }}>API JOKES</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>

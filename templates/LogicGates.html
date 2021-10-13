@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >Logic Gates</title>
+   <script>
+       
+    function gateOutput()
+    {
+    var input1 = document.getElementById("input1").value;
+    var input2 = document.getElementById("input2").value;
+    var gtype = document.getElementById("gateType").value;
+    var gateOutput;
+
+    switch(gtype)
+    {
+    case "AND": gateOutput = input1 & input2; break;
+    case "OR" : gateOutput = input1 | input2; break;
+    case "XOR": gateOutput = input1 ^ input2;;
+    }
+
+    document.getElementById("output").value = gateOutput;
+    }
+
+    function gateType(){
+
+        document.getElementById("btn").innerHTML = "Logical " +
+            document.getElementById("gateType").value ;
+    }
+   </script>
+    </head>
+<body style="background-color: burlywood">
+<h3 style="color: #cc0000 ">Logic Gates</h3>
+
+<select class="ip1" id="input1" >
+    <option value="0" > 0</option>
+    <option value="1">1</option>
+</select>
+
+
+<select class="ip2" id="input2">
+     <option value="0">0</option>
+     <option value="1">1</option>
+</select>
+
+<select class="gtype" id="gateType" onclick="gateType()">
+    <option value="AND" >AND</option>
+    <option value="OR">OR</option>
+    <option value="XOR">XOR</option>
+</select>
+<button class="btn" onclick="gateOutput()" id="btn">Logical AND</button>
+<input class="op" id="output">
+</body>
+</html>
+
+<!--# create a dictionary using two list
+students = ['Amanda', 'Teresa', 'Paula', 'Mario']
+ages = [27, 38, 17, 40]
+
+# zip method --> iterator of tuples --> dict method --> dictionary
+students_ages = dict(zip(students, ages))
+
+print(students_ages)
+# {'Amanda': 27, 'Teresa': 38, 'Paula': 17, 'Mario': 40}-->
